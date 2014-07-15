@@ -4,7 +4,7 @@ angular.module('starter.services', [])
  * A simple example service that returns some data.
  */
 .factory('Challenge', function($resource) {
-  // Might use a resource here that returns a JSON array
+
   return $resource('http://localhost:8080/challenges')
 
   // Some fake testing data
