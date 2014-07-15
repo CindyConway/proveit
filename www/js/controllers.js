@@ -1,6 +1,25 @@
 angular.module('starter.controllers', [])
 
-.controller('ChallengeCtrl', function($scope) {
+.controller('ChallengeCtrl', function($scope, Challenge) {
+  // $scope.viewable = [
+  // { text: "Yes", value: "Yes" },
+  // { text: "No", value: "No" },
+  // { text: "Just people I invite", value: "Just people I invite" }
+  // ];
+
+  // $scope.data = {
+  //   viewable: 'Yes'
+  // };
+
+  $scope.challenges = Challenge.query();
+
+  $scope.challengeData={};
+  $scope.newChallenge = function(){
+    var challenge = new Challenge($scope.challengeData)
+    console.log("im here")
+    challenge.$save();
+
+  }
 })
 
 .controller('JoinTrackCtrl', function($scope, Friends) {
