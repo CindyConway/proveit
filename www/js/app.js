@@ -48,15 +48,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
       }
     })
 
-    .state('tab.join-track', {
-      url: '/join-track',
+   .state('tab.complete-challenge', {
+      url: '/complete-challenge',
       views: {
-        'tab-join-track': {
-          templateUrl: 'templates/tab-join-track.html',
-          controller: 'JoinTrackCtrl'
+        'tab-complete-challenge': {
+          templateUrl: 'templates/tab-complete-challenge.html',
+          controller: 'CompleteChallengeCtrl'
         }
       }
     })
+
     .state('tab.friend-detail', {
       url: '/friend/:friendId',
       views: {
