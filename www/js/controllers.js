@@ -11,15 +11,14 @@ angular.module('starter.controllers', [])
   //   viewable: 'Yes'
   // };
 
-  $scope.challenges = Challenge.query();
+  //$scope.challenges = Challenge.query();
 
   $scope.challengeData={};
   $scope.newChallenge = function(){
     var challenge = new Challenge($scope.challengeData)
-    console.log("im here")
     challenge.$save();
-
   }
+
 })
 
 .controller('JoinTrackCtrl', function($scope, Friends) {
