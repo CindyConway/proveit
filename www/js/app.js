@@ -39,14 +39,43 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
 
-    .state('app.browse', {
-      url: "/browse",
+    .state('app.notificatons', {
+      url: "/notifications",
       views: {
         'menuContent' :{
-          templateUrl: "templates/browse.html"
+          templateUrl: "templates/notifications.html"
         }
       }
     })
+
+    .state('app.profile', {
+      url: "/profile",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/profile.html"
+        }
+      }
+    })
+
+    .state('app.security', {
+      url: "/security",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/security.html",
+          controller: 'HomeCtrl'
+        }
+      }
+    })
+
+    .state('app.about', {
+      url: "/about",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/about.html"
+        }
+      }
+    })
+
     .state('app.home', {
       url: "/home",
       views: {
