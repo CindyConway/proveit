@@ -1,2 +1,2 @@
-/Users/cindy/Projects/proveit/platforms/android/ant-build/AndroidManifest.xml : \
-/Users/cindy/Projects/proveit/platforms/android/AndroidManifest.xml \
+/Users/geoffpavey/Development/ionic/platforms/android/ant-build/AndroidManifest.xml : \
+/Users/geoffpavey/Development/ionic/platforms/android/AndroidManifest.xml \
