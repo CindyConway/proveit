@@ -62,7 +62,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       views: {
         'menuContent' :{
           templateUrl: "templates/security.html",
-          controller: 'HomeCtrl'
         }
       }
     })
@@ -85,6 +84,39 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
+
+    .state('tabs', {
+      url: "/tab",
+      abstract: true,
+      templateUrl: "tabs.html"
+    })
+    .state('tabs.myFeed', {
+      url: "/my-feed",
+      views: {
+        'my-feed-tab': {
+          templateUrl: "my-feed.html",
+          controller: 'MyFeedTabCtrl'
+        }
+      }
+    })
+
+    .state('tabs.fresh', {
+      url: "/fresh",
+      views: {
+        'fresh-tab': {
+          templateUrl: "fresh.html"
+        }
+      }
+    })
+
+    .state('tabs.atta', {
+      url: "/atta",
+      views: {
+        'atta-tab': {
+          templateUrl: "atta.html"
+        }
+      }
+    });
 
 
   // if none of the above states are matched, use this as the fallback
