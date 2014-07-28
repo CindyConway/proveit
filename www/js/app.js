@@ -39,14 +39,42 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
 
-    .state('app.browse', {
-      url: "/browse",
+    .state('app.notificatons', {
+      url: "/notifications",
       views: {
         'menuContent' :{
-          templateUrl: "templates/browse.html"
+          templateUrl: "templates/notifications.html"
         }
       }
     })
+
+    .state('app.profile', {
+      url: "/profile",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/profile.html"
+        }
+      }
+    })
+
+    .state('app.security', {
+      url: "/security",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/security.html",
+        }
+      }
+    })
+
+    .state('app.about', {
+      url: "/about",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/about.html"
+        }
+      }
+    })
+
     .state('app.home', {
       url: "/home",
       views: {
@@ -56,6 +84,39 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
+
+    .state('tabs', {
+      url: "/tab",
+      abstract: true,
+      templateUrl: "tabs.html"
+    })
+    .state('tabs.myFeed', {
+      url: "/my-feed",
+      views: {
+        'my-feed-tab': {
+          templateUrl: "my-feed.html",
+          controller: 'MyFeedTabCtrl'
+        }
+      }
+    })
+
+    .state('tabs.fresh', {
+      url: "/fresh",
+      views: {
+        'fresh-tab': {
+          templateUrl: "fresh.html"
+        }
+      }
+    })
+
+    .state('tabs.atta', {
+      url: "/atta",
+      views: {
+        'atta-tab': {
+          templateUrl: "atta.html"
+        }
+      }
+    });
 
 
   // if none of the above states are matched, use this as the fallback
