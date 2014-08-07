@@ -1,3 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+  </head>
+
+  <body ng-app="starter">
+    <ion-nav-view></ion-nav-view>
+  </body>
+</html>
+
 <html ng-app="ionicApp">
 <head>
     <meta charset="utf-8">
@@ -5,9 +35,8 @@
 
     <title>Ionic Template</title>
 
-    <link href="http://code.ionicframework.com/1.0.0-beta.4/css/ionic.min.css" rel="stylesheet">
-    <script src="http://code.ionicframework.com/1.0.0-beta.4/js/ionic.bundle.min.js"></script>
-    <script src="app.js"></script>
+    <link href="http://code.ionicframework.com/0.9.27/css/ionic.min.css" rel="stylesheet">
+    <script src="http://code.ionicframework.com/0.9.27/js/ionic.bundle.min.js"></script>
 </head>
 <body>
 
@@ -15,10 +44,11 @@
 <ion-nav-view></ion-nav-view>
 
 <script id="entry.html" type="text/ng-template">
-
-    <ion-nav-buttons side="left">
-        <button menu-toggle="left"class="button button-icon icon ion-navicon">Attas</button>
-    </ion-nav-buttons>
+    <ion-nav-bar animation="nav-title-slide-ios7"
+                 type="bar-positive"
+                 back-button-type="button-icon"
+                 back-button-icon="ion-ios7-arrow-back">
+    </ion-nav-bar>
 
     <ion-view title="{{navTitle}}" class="bubble-background">
 
@@ -37,7 +67,7 @@
 <script id="tabs.html" type="text/ng-template">
     <ion-view title="{{navTitle}}"  left-buttons="leftButtons">
 
-        <ion-tabs tabs-type="tabs-icon-only" class="tabs-icon-top tabs-positive has-tabs-top tabs-top">
+        <ion-tabs tabs-type="tabs-icon-only">
             <ion-tab title="Tab 1" icon-on="ion-ios7-filing" icon-off="ion-ios7-filing-outline">
                 <ion-content has-header="true" padding="true">
                     <h2>Tab 1 Content</h2>
@@ -64,15 +94,15 @@
 <script id="mainContainer.html" type="text/ng-template">
 
     <ion-side-menus>
-        <ion-pane ion-side-menu-content>
-        </ion-side-menu-content>
 
-        <ion-nav-bar  class="bar-positive">
-            </ion-nav-back-button>
-            <ion-nav-buttons side="left">
-                <button menu-toggle="left"class="button button-icon icon ion-navicon">Attas</button>
-            </ion-nav-buttons>
-        </ion-nav-bar>
+        <ion-pane ion-side-menu-content>
+            <ion-nav-bar type="bar-positive"
+                         back-button-type="button-icon"
+                         back-button-icon="ion-ios7-arrow-back"
+                         animation="nav-title-slide-ios7"
+                >
+
+             </ion-nav-bar>
             <ion-nav-view name="main"></ion-nav-view>
         </ion-pane>
 
@@ -125,3 +155,5 @@
 
 </body>
 </html>
+
+

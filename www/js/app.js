@@ -24,26 +24,26 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   $stateProvider
 
     .state('app', {
-      url: "/app",
-      abstract: true,
-      templateUrl: "templates/menu.html",
-      controller: 'AppCtrl'
+      url         : "/app",
+      abstract    : true,
+      templateUrl : "templates/menu.html",
+      controller  : 'AppCtrl'
     })
 
     .state('app.search', {
-      url: "/search",
+      url             : "/search",
       views: {
         'menuContent' :{
-          templateUrl: "templates/search.html"
+          templateUrl : "templates/search.html"
         }
       }
     })
 
     .state('app.notificatons', {
       url: "/notifications",
-      views: {
+      views :{
         'menuContent' :{
-          templateUrl: "templates/notifications.html"
+          templateUrl : "templates/notifications.html"
         }
       }
     })
@@ -85,17 +85,26 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
 
+    .state('app.home.feed',{
+      url:"",
+      views: {
+        'completed-count':{
+          template: '<div ui-view class="viewContainer" autoscroll="false" />'
+        }
+      }
+    })
+
     .state('tabs', {
       url: "/tab",
       abstract: true,
-      templateUrl: "tabs.html"
+      // templateUrl: "templates/tabs/tabs.html"
     })
+
     .state('tabs.myFeed', {
-      url: "/my-feed",
+      url: "/my-feeds",
       views: {
         'my-feed-tab': {
-          templateUrl: "my-feed.html",
-          controller: 'MyFeedTabCtrl'
+          templateUrl: "templates/tabs/my-feed.html",
         }
       }
     })
@@ -104,9 +113,11 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       url: "/fresh",
       views: {
         'fresh-tab': {
-          templateUrl: "fresh.html"
+          templateUrl: "templates/tabs/fresh.html"
         }
       }
+
+
     })
 
     .state('tabs.atta', {
@@ -118,8 +129,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     });
 
-
-  // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
 });
 
